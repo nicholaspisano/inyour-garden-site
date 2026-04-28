@@ -48,32 +48,68 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="mx-auto max-w-5xl px-6 pt-20 pb-16 text-center">
-      <div className="inline-flex items-center gap-2 rounded-full border border-green-200 bg-white px-3 py-1 mb-6">
-        <Sprout size={13} className="text-green-600" />
-        <span className="text-xs font-medium text-green-700">Personal garden dashboard</span>
+    <section className="mx-auto max-w-5xl px-6 pt-16 pb-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 items-center">
+
+        {/* Left — garden photo */}
+        <div className="relative h-80 sm:h-[420px] rounded-2xl overflow-hidden shadow-lg order-last sm:order-first">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=900&q=85&auto=format&fit=crop"
+            alt="Lush green garden plants"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/15" />
+        </div>
+
+        {/* Right — text */}
+        <div className="space-y-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 leading-tight tracking-tight">
+            Know what's in your garden.
+          </h1>
+          <p className="text-base text-stone-500 leading-relaxed">
+            A personal dashboard that tracks what needs watering, what's ready to harvest,
+            and what needs attention — with a daily digest delivered every morning.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link
+              href="https://demo.inyour.garden"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-700 px-6 py-3 text-sm font-semibold text-white hover:bg-green-800 transition-colors"
+            >
+              Explore a live demo
+              <ArrowRight size={15} />
+            </Link>
+            <Link
+              href="#contact"
+              className="inline-flex items-center justify-center rounded-xl border border-stone-300 bg-white px-6 py-3 text-sm font-semibold text-stone-700 hover:bg-stone-50 transition-colors"
+            >
+              Get in touch
+            </Link>
+          </div>
+        </div>
+
       </div>
-      <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 leading-tight tracking-tight mb-5">
-        Know what's in<br className="hidden sm:block" /> your garden.
-      </h1>
-      <p className="text-lg text-stone-600 max-w-xl mx-auto mb-8 leading-relaxed">
-        A personal dashboard that tracks what needs watering, what's ready to harvest,
-        and what needs attention — with a daily digest delivered every morning.
-      </p>
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-        <Link
-          href="https://demo.inyour.garden"
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-green-700 px-6 py-3 text-sm font-semibold text-white hover:bg-green-800 transition-colors"
-        >
-          Explore a live demo
-          <ArrowRight size={15} />
-        </Link>
-        <Link
-          href="#contact"
-          className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl border border-stone-300 bg-white px-6 py-3 text-sm font-semibold text-stone-700 hover:bg-stone-50 transition-colors"
-        >
-          Get in touch
-        </Link>
+
+      {/* Browser mockup — below both columns, overlaps into next section */}
+      <div className="relative z-10 mt-12 -mb-28">
+        <div className="rounded-xl overflow-hidden shadow-2xl border border-stone-200">
+          <div className="bg-stone-800 px-4 py-3 flex items-center gap-3">
+            <div className="flex gap-1.5 shrink-0">
+              <div className="w-3 h-3 rounded-full bg-red-400/80" />
+              <div className="w-3 h-3 rounded-full bg-yellow-400/80" />
+              <div className="w-3 h-3 rounded-full bg-green-400/80" />
+            </div>
+            <div className="flex-1 bg-stone-700 rounded-md px-3 py-1 text-xs text-stone-400 text-center tracking-tight">
+              app.inyour.garden
+            </div>
+          </div>
+          <div className="bg-[#e8ede8] h-56 sm:h-80 flex items-center justify-center">
+            <div className="text-center space-y-2">
+              <Sprout size={24} className="text-stone-300 mx-auto" />
+              <p className="text-xs text-stone-400">Dashboard screenshot coming soon</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -91,7 +127,7 @@ function ValueProps() {
     {
       icon: <Mail size={18} className="text-green-600" />,
       title: "Your morning briefing",
-      body: "A daily digest at 8am covers what's due to be watered, what needs fertilizing, and any plants flagged for attention. Plan your morning before you're outside.",
+      body: "A daily digest covers what's due to be watered, what needs fertilizing, and any plants flagged for attention. Plan your morning before you're outside.",
     },
     {
       icon: <Share2 size={18} className="text-stone-500" />,
@@ -101,7 +137,7 @@ function ValueProps() {
   ];
 
   return (
-    <section id="features" className="mx-auto max-w-5xl px-6 pb-16">
+    <section id="features" className="mx-auto max-w-5xl px-6 pt-40 pb-16">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {props.map((p) => (
           <div key={p.title} className="rounded-xl border border-stone-200 bg-white px-5 py-5 space-y-3">
@@ -128,7 +164,7 @@ function DigestFeature() {
           <span className="text-xs font-medium text-green-200">Daily digest</span>
         </div>
         <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug">
-          Every morning at 8am,<br className="hidden sm:block" /> your garden sends you a report.
+          Every morning,<br className="hidden sm:block" /> your garden sends you a report.
         </h2>
         <p className="text-green-200 text-base leading-relaxed max-w-xl mx-auto">
           What's due to be watered. What needs fertilizing. Any plants flagged for
@@ -263,15 +299,19 @@ function Pricing() {
       <div className="text-center mb-8">
         <h2 className="text-2xl font-bold text-stone-900">Simple, transparent pricing</h2>
         <p className="text-stone-500 text-sm mt-2">
-          We configure everything and hand it off running. You don't touch the infrastructure.
+          Every tier includes full setup. Pick the level of hands-on help you want.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-        {/* Hosted */}
-        <div className="rounded-xl border-2 border-green-200 bg-white px-6 py-6 space-y-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+        {/* Guided setup */}
+        <div className="rounded-xl border-2 border-green-300 bg-white px-6 py-6 space-y-4 relative">
+          <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span className="rounded-full bg-green-700 px-3 py-0.5 text-xs font-semibold text-white">Most popular</span>
+          </div>
           <div>
-            <p className="text-sm font-bold text-green-800 uppercase tracking-wider">Hosted</p>
-            <p className="text-stone-500 text-xs mt-1">We handle everything</p>
+            <p className="text-sm font-bold text-green-800 uppercase tracking-wider">Guided Setup</p>
+            <p className="text-stone-500 text-xs mt-1">We build it with you</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-stone-900">$TK <span className="text-sm font-normal text-stone-400">setup</span></p>
@@ -279,13 +319,14 @@ function Pricing() {
           </div>
           <ul className="space-y-2 text-sm text-stone-600">
             {[
-              "Full setup and configuration",
-              "Your own infrastructure",
+              "30-min call with a master gardener",
+              "Zones and plants pre-loaded for you",
+              "Hosted on our cloud infrastructure",
               "You own your data",
               "Technical support included",
             ].map((item) => (
               <li key={item} className="flex items-start gap-2">
-                <span className="text-green-500 mt-0.5">✓</span>
+                <span className="text-green-500 shrink-0 mt-0.5">✓</span>
                 {item}
               </li>
             ))}
@@ -298,25 +339,57 @@ function Pricing() {
           </Link>
         </div>
 
-        {/* Self-hosted */}
+        {/* Hosted */}
         <div className="rounded-xl border border-stone-200 bg-white px-6 py-6 space-y-4">
           <div>
-            <p className="text-sm font-bold text-stone-600 uppercase tracking-wider">Self-hosted</p>
-            <p className="text-stone-500 text-xs mt-1">You run it yourself</p>
+            <p className="text-sm font-bold text-stone-700 uppercase tracking-wider">Hosted</p>
+            <p className="text-stone-500 text-xs mt-1">Set up yourself</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-stone-900">$TK <span className="text-sm font-normal text-stone-400">setup</span></p>
+            <p className="text-sm text-stone-500 mt-0.5">+ $TK/mo hosting</p>
+          </div>
+          <ul className="space-y-2 text-sm text-stone-600">
+            {[
+              "Guided onboarding flow",
+              "Configure your own zones and plants",
+              "Hosted on our cloud infrastructure",
+              "You own your data",
+              "Technical support included",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2">
+                <span className="text-green-500 shrink-0 mt-0.5">✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <Link
+            href="#contact"
+            className="block w-full text-center rounded-lg border border-stone-300 px-4 py-2.5 text-sm font-semibold text-stone-700 hover:bg-stone-50 transition-colors"
+          >
+            Get started
+          </Link>
+        </div>
+
+        {/* Self-hosted */}
+        <div className="rounded-xl border border-stone-200 bg-white px-6 py-6 space-y-4">
+          <div>
+            <p className="text-sm font-bold text-stone-600 uppercase tracking-wider">Self-Hosted</p>
+            <p className="text-stone-500 text-xs mt-1">You run the infrastructure</p>
+          </div>
+          <div>
+            <p className="text-2xl font-bold text-stone-900">$TK <span className="text-sm font-normal text-stone-400">one-time</span></p>
             <p className="text-sm text-stone-500 mt-0.5">No monthly fee</p>
           </div>
           <ul className="space-y-2 text-sm text-stone-600">
             {[
-              "Full setup and configuration",
+              "Full setup and handoff",
               "Deploy to your own infrastructure",
               "You own your data",
               "Best-effort technical support",
             ].map((item) => (
               <li key={item} className="flex items-start gap-2">
-                <span className="text-stone-400 mt-0.5">✓</span>
+                <span className="text-stone-400 shrink-0 mt-0.5">✓</span>
                 {item}
               </li>
             ))}
@@ -328,6 +401,7 @@ function Pricing() {
             Get in touch
           </Link>
         </div>
+
       </div>
     </section>
   );
