@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
+import { Lightbox } from "@/components/Lightbox";
 
 // ── Nav ───────────────────────────────────────────────────────────────────────
 
@@ -105,8 +106,7 @@ function Hero() {
             </div>
           </div>
           <div className="h-56 sm:h-80 overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/screenshot-dashboard.png" alt="Garden dashboard showing watering schedule" className="w-full h-full object-cover object-top" />
+            <Lightbox src="/screenshot-dashboard.png" alt="Garden dashboard showing watering schedule" className="w-full h-full object-cover object-top" />
           </div>
         </div>
       </div>
@@ -209,8 +209,7 @@ function PublicPageFeature() {
           </p>
         </div>
         <div className="rounded-xl overflow-hidden h-48">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/screenshot-dashboard2.png.png" alt="Garden dashboard showing weather and recent harvests" className="w-full h-full object-cover object-top" />
+          <Lightbox src="/screenshot-dashboard2.png.png" alt="Garden dashboard showing weather and recent harvests" className="w-full h-full object-cover object-top" />
         </div>
       </div>
     </section>
