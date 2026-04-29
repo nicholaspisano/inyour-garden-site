@@ -101,14 +101,12 @@ function Hero() {
               <div className="w-3 h-3 rounded-full bg-green-400/80" />
             </div>
             <div className="flex-1 bg-stone-700 rounded-md px-3 py-1 text-xs text-stone-400 text-center tracking-tight">
-              app.inyour.garden
+              demo.inyour.garden
             </div>
           </div>
-          <div className="bg-[#e8ede8] h-56 sm:h-80 flex items-center justify-center">
-            <div className="text-center space-y-2">
-              <Sprout size={24} className="text-stone-300 mx-auto" />
-              <p className="text-xs text-stone-400">Dashboard screenshot coming soon</p>
-            </div>
+          <div className="h-56 sm:h-80 overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/screenshot-dashboard.png.png" alt="Garden dashboard showing watering schedule" className="w-full h-full object-cover object-top" />
           </div>
         </div>
       </div>
@@ -210,8 +208,9 @@ function PublicPageFeature() {
             Friends and family can check in anytime without asking you.
           </p>
         </div>
-        <div className="rounded-xl border border-dashed border-stone-200 bg-stone-50 h-48 flex items-center justify-center">
-          <p className="text-xs text-stone-400">Screenshot coming soon</p>
+        <div className="rounded-xl overflow-hidden h-48">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/screenshot-dashboard2.png.png" alt="Garden dashboard showing weather and recent harvests" className="w-full h-full object-cover object-top" />
         </div>
       </div>
     </section>
