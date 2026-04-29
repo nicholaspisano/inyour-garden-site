@@ -316,7 +316,7 @@ function Pricing() {
           </div>
           <div>
             <p className="text-2xl font-bold text-stone-900">$199 <span className="text-sm font-normal text-stone-400">setup</span></p>
-            <p className="text-sm text-stone-500 mt-0.5">+ $7/mo hosting</p>
+            <p className="text-sm text-stone-500 mt-0.5">+ $8/mo hosting</p>
           </div>
           <ul className="space-y-2 text-sm text-stone-600">
             {[
@@ -348,7 +348,7 @@ function Pricing() {
           </div>
           <div>
             <p className="text-2xl font-bold text-stone-900">$129 <span className="text-sm font-normal text-stone-400">setup</span></p>
-            <p className="text-sm text-stone-500 mt-0.5">+ $7/mo hosting</p>
+            <p className="text-sm text-stone-500 mt-0.5">+ $8/mo hosting</p>
           </div>
           <ul className="space-y-2 text-sm text-stone-600">
             {[
