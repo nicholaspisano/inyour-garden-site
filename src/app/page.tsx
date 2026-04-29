@@ -106,7 +106,7 @@ function Hero() {
           </div>
           <div className="h-56 sm:h-80 overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/screenshot-dashboard.png.png" alt="Garden dashboard showing watering schedule" className="w-full h-full object-cover object-top" />
+            <img src="/screenshot-dashboard.png" alt="Garden dashboard showing watering schedule" className="w-full h-full object-cover object-top" />
           </div>
         </div>
       </div>
