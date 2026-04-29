@@ -315,8 +315,8 @@ function Pricing() {
             <p className="text-stone-500 text-xs mt-1">We build it with you</p>
           </div>
           <div>
-            <p className="text-2xl font-bold text-stone-900">$TK <span className="text-sm font-normal text-stone-400">setup</span></p>
-            <p className="text-sm text-stone-500 mt-0.5">+ $TK/mo hosting</p>
+            <p className="text-2xl font-bold text-stone-900">$199 <span className="text-sm font-normal text-stone-400">setup</span></p>
+            <p className="text-sm text-stone-500 mt-0.5">+ $7/mo hosting</p>
           </div>
           <ul className="space-y-2 text-sm text-stone-600">
             {[
@@ -347,8 +347,8 @@ function Pricing() {
             <p className="text-stone-500 text-xs mt-1">Set up yourself</p>
           </div>
           <div>
-            <p className="text-2xl font-bold text-stone-900">$TK <span className="text-sm font-normal text-stone-400">setup</span></p>
-            <p className="text-sm text-stone-500 mt-0.5">+ $TK/mo hosting</p>
+            <p className="text-2xl font-bold text-stone-900">$129 <span className="text-sm font-normal text-stone-400">setup</span></p>
+            <p className="text-sm text-stone-500 mt-0.5">+ $7/mo hosting</p>
           </div>
           <ul className="space-y-2 text-sm text-stone-600">
             {[
@@ -379,7 +379,7 @@ function Pricing() {
             <p className="text-stone-500 text-xs mt-1">You run the infrastructure</p>
           </div>
           <div>
-            <p className="text-2xl font-bold text-stone-900">$TK <span className="text-sm font-normal text-stone-400">one-time</span></p>
+            <p className="text-2xl font-bold text-stone-900">$99 <span className="text-sm font-normal text-stone-400">one-time</span></p>
             <p className="text-sm text-stone-500 mt-0.5">No monthly fee</p>
           </div>
           <ul className="space-y-2 text-sm text-stone-600">
