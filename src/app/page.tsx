@@ -9,6 +9,7 @@ import {
   Wheat,
   ArrowRight,
 } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
 
 // ── Nav ───────────────────────────────────────────────────────────────────────
 
@@ -412,19 +413,7 @@ function Pricing() {
 function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-5xl px-6 pb-16">
-      <div className="rounded-xl border border-stone-200 bg-white px-8 py-8 max-w-lg mx-auto text-center space-y-4">
-        <h2 className="text-xl font-bold text-stone-900">Get in touch</h2>
-        <p className="text-stone-500 text-sm leading-relaxed">
-          Have a question or ready to get started? Send us a message and we'll get back to you shortly.
-        </p>
-        <a
-          href="mailto:hello@inyour.garden"
-          className="inline-flex items-center gap-2 rounded-xl bg-green-700 px-6 py-3 text-sm font-semibold text-white hover:bg-green-800 transition-colors"
-        >
-          <Mail size={15} />
-          hello@inyour.garden
-        </a>
-      </div>
+      <ContactForm />
     </section>
   );
 }
