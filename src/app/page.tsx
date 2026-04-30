@@ -209,7 +209,7 @@ function PublicPageFeature() {
           </p>
         </div>
         <div className="rounded-xl overflow-hidden h-48">
-          <Lightbox src="/screenshot-dashboard2.png.png" alt="Garden dashboard showing weather and recent harvests" className="w-full h-full object-cover object-top" />
+          <Lightbox src="/publicdashboard.png.png" alt="Public garden page showing photos and harvest summary" className="w-full h-full object-cover object-top" />
         </div>
       </div>
     </section>
